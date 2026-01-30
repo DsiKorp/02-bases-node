@@ -6,9 +6,9 @@
 //const { getUserById } = require('./js-foundation/04-arrow');
 //------------------------------------------------------------
 // Importamos los plugins del archivo de barril
-const { getUUID, getAge } = require('./plugins');
+import { getUUID, getAge } from './plugins';
 // Importamos el factory
-const { buildMakePerson } = require('./js-foundation/05-factory');
+import { buildMakePerson } from './js-foundation/05-factory';
 //-----------------------------------------------------------
 
 //console.log(emailTemplate)

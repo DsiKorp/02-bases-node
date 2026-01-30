@@ -1,10 +1,10 @@
-const emailTemplate = `
+export const emailTemplate = `
 <div>   
     <h1>Helo {{name}}</h1>
     <p>Thank you for your order.</p>
 </div>
 `;
 
-module.exports = {
-    emailTemplate,
-}
+// module.exports = {
+//     emailTemplate,
+// }
