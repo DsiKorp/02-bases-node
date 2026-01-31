@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for plugins/http-client.plugin.ts</title>
+    <title>Code coverage report for js-foundation/06-promises.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">plugins</a> http-client.plugin.ts</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">js-foundation</a> 06-promises.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">64% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>16/25</span>
+                <span class='fraction'>24/24</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">25% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/4</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">64% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>16/25</span>
+                <span class='fraction'>24/24</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -86,56 +86,53 @@
 <a name='L21'></a><a href='#L21'>21</a>
 <a name='L22'></a><a href='#L22'>22</a>
 <a name='L23'></a><a href='#L23'>23</a>
-<a name='L24'></a><a href='#L24'>24</a>
-<a name='L25'></a><a href='#L25'>25</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L24'></a><a href='#L24'>24</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">import axios from 'axios';
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">import { httpClient } from "../plugins";
 &nbsp;
-export const httpClientPlugin = {
-    get: async (url: string) =&gt; {
-        const { data } = await axios.get(url);
-        return data;
-    },
+// const getPokemonById = (id) =&gt; {
+//     const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
 &nbsp;
-    post: <span class="fstat-no" title="function not covered" >async (url: string, body: any) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >        console.log('post')</span>
-<span class="cstat-no" title="statement not covered" >        throw new Error('Not implemented');</span>
-<span class="cstat-no" title="statement not covered" ></span>
-    },
+//     return fetch(url)
+//         .then(response =&gt; response.json())
+//         .then(pokemon =&gt; pokemon.name);
+// };
 &nbsp;
-    put: <span class="fstat-no" title="function not covered" >async (url: string, body: any) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >        console.log('put')</span>
-<span class="cstat-no" title="statement not covered" >        throw new Error('Not implemented');</span>
-<span class="cstat-no" title="statement not covered" ></span>
-    },
+export const getPokemonById = async (id: number | string): Promise&lt;string&gt; =&gt; {
+    try {
+        const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
 &nbsp;
-    delete: <span class="fstat-no" title="function not covered" >async (url: string) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >        console.log('delete')</span>
-<span class="cstat-no" title="statement not covered" >        throw new Error('Not implemented');</span>
-<span class="cstat-no" title="statement not covered" >    }</span>
-}</pre></td></tr></table></pre>
+        const pokemon = await httpClient.get(url);
+        return pokemon.name;
+    } catch (error) {
+        throw `Pokemon with id: ${id} not found`;
+    }
+};
+&nbsp;
+// se exporta directamente la función
+//module.exports = getPokemonById;
+//</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->

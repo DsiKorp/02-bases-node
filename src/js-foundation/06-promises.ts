@@ -8,11 +8,15 @@ import { httpClient } from "../plugins";
 //         .then(pokemon => pokemon.name);
 // };
 
-export const getPokemonById = async (id: number | number): Promise<string> => {
-    const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
+export const getPokemonById = async (id: number | string): Promise<string> => {
+    try {
+        const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
 
-    const pokemon = await httpClient.get(url);
-    return pokemon.name;
+        const pokemon = await httpClient.get(url);
+        return pokemon.name;
+    } catch (error) {
+        throw `Pokemon with id: ${id} not found`;
+    }
 };
 
 // se exporta directamente la función

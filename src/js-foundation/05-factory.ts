@@ -1,11 +1,11 @@
 // Un factory fuction is a function that returns an function
 //const { getUUID, getAge } = require('../plugins');
-interface MakePersonOptions {
+interface BuildMakerPersonOptions {
     getUUID: () => string;
     getAge: (birthdate: string) => number | Error;
 }
 
-interface PersonInput {
+interface PersonOptions {
     name: string;
     birthdate: string;
 }
@@ -18,8 +18,8 @@ interface Person {
 }
 
 // se envian las dependencias como parametros o argumentos getUUID, getAge
-const buildMakePerson = ({ getUUID, getAge }: MakePersonOptions) => {
-    return ({ name, birthdate }: PersonInput) => {
+const buildMakePerson = ({ getUUID, getAge }: BuildMakerPersonOptions) => {
+    return ({ name, birthdate }: PersonOptions) => {
         const age = getAge(birthdate);
         if (age instanceof Error) {
             throw age;
